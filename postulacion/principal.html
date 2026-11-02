@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Escudo — Propuesta de innovación · AseguraTech26</title>
+<style>
+  @font-face { font-family: Geist; src: url(geist.woff2) format("woff2"); font-weight: 100 900; }
+  @font-face { font-family: GeistMono; src: url(geist-mono.woff2) format("woff2"); font-weight: 100 900; }
+  @page { size: 210mm 297mm; margin: 0; }
+  :root { --r50: #f0fdfa; --r100: #ccfbf1; --r200: #99f6e4; --r400: #2dd4bf; --r500: #0d9488; --r600: #0f766e; --r700: #115e59; --t950: #020617; --t900: #0f172a; --t700: #334155; --t500: #64748b; --t200: #e2e8f0; --t100: #f1f5f9; --verde: #16a34a; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Geist, sans-serif; color: var(--t900); font-size: 10pt; line-height: 1.45; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .pagina { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; padding: 18mm 17mm 20mm; background: #fff; }
+  .pagina:last-child { page-break-after: auto; }
+  .pie { position: absolute; left: 17mm; right: 17mm; bottom: 9mm; display: flex; justify-content: space-between; font-size: 7.5pt; color: #94a3b8; border-top: 0.3mm solid var(--t200); padding-top: 2.5mm; }
+  .seccion { font-size: 8pt; font-weight: 750; letter-spacing: 0.1em; text-transform: uppercase; color: var(--r600); }
+  h1 { font-size: 24pt; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; color: var(--t950); margin: 2mm 0 5mm; }
+  h2 { font-size: 13pt; font-weight: 750; letter-spacing: -0.015em; color: var(--t950); margin: 6mm 0 2mm; }
+  h3 { font-size: 10.5pt; font-weight: 700; color: var(--t950); margin-bottom: 1mm; }
+  p { color: #334155; margin-bottom: 2.5mm; }
+  p b, li b, td b { color: var(--t950); }
+  .intro { font-size: 11.5pt; line-height: 1.5; color: #1e293b; }
+  ul { list-style: none; margin-bottom: 3mm; }
+  li { position: relative; padding-left: 4.5mm; margin-top: 1.4mm; color: #334155; }
+  li::before { content: ""; position: absolute; left: 0; top: 2mm; width: 1.8mm; height: 1.8mm; border-radius: 50%; background: var(--r500); }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5mm; }
+  .tarjeta { border: 0.3mm solid var(--t200); border-radius: 3.5mm; padding: 4.5mm 5mm; background: #f8fafc; }
+  .tarjeta .ic { font-size: 17pt; line-height: 1; margin-bottom: 2mm; }
+  .tarjeta .dato { font-size: 15pt; font-weight: 800; letter-spacing: -0.03em; color: var(--r600); line-height: 1.05; margin-bottom: 1.5mm; }
+  .fuente { font-size: 7.5pt; color: var(--t500); margin-top: 1.5mm; }
+  .destacado { background: var(--r50); border: 0.3mm solid var(--r100); border-radius: 3.5mm; padding: 4.5mm 5.5mm; margin: 4mm 0; }
+  .destacado.verde { background: #f0fdf4; border-color: #bbf7d0; }
+  figure { border: 0.3mm solid var(--t200); border-radius: 3mm; overflow: hidden; background: #f5f7fa; }
+  figure img { display: block; width: 100%; }
+  figcaption { font-size: 8pt; color: var(--t500); padding: 2mm 3mm; background: #fff; border-top: 0.3mm solid var(--t200); }
+  figcaption b { color: var(--t950); }
+  .tel { text-align: center; }
+  .tel img { width: 100%; border-radius: 7mm; border: 2.2mm solid var(--t950); display: block; }
+  .tel p { font-size: 8.5pt; margin-top: 2.5mm; color: var(--t700); text-align: left; }
+  .paso { display: flex; gap: 3mm; align-items: baseline; }
+  .num { flex: 0 0 auto; width: 7mm; height: 7mm; border-radius: 50%; background: var(--t900); color: #fff; font-weight: 750; font-size: 9pt; display: inline-flex; align-items: center; justify-content: center; }
+  table { width: 100%; border-collapse: collapse; font-size: 8.8pt; margin: 2mm 0 3mm; }
+  th { text-align: left; font-size: 7.5pt; letter-spacing: 0.05em; text-transform: uppercase; color: var(--t500); background: var(--t100); padding: 2mm 2.5mm; border-bottom: 0.3mm solid var(--t200); }
+  td { padding: 1.8mm 2.5mm; border-bottom: 0.3mm solid #eef2f7; color: #334155; vertical-align: top; }
+  td.cod { font-family: GeistMono, monospace; text-align: center; color: var(--t950); font-weight: 600; }
+  .mono { font-family: GeistMono, monospace; }
+  .tl { position: relative; padding-left: 7mm; }
+  .tl::before { content: ""; position: absolute; left: 2.2mm; top: 2mm; bottom: 2mm; width: 0.5mm; background: var(--r200); }
+  .tl .it { position: relative; margin-bottom: 3mm; }
+  .tl .it::before { content: ""; position: absolute; left: -6.3mm; top: 1.2mm; width: 3mm; height: 3mm; border-radius: 50%; background: var(--r500); }
+  .tl .h { font-family: GeistMono, monospace; font-size: 8pt; color: var(--r600); }
+
+  .portada { background: radial-gradient(150mm 110mm at 85% 15%, rgba(13,148,136,.5) 0%, transparent 65%), linear-gradient(160deg, #020617 0%, #0f172a 60%, #1e293b 100%); color: #fff; padding: 24mm 20mm; display: flex; flex-direction: column; }
+  .portada .logo { font-size: 66pt; font-weight: 800; letter-spacing: -0.045em; line-height: 1; margin-top: 30mm; }
+  .portada .logo b { color: var(--r400); }
+  .portada .lema { font-size: 21pt; font-weight: 700; line-height: 1.2; margin-top: 8mm; letter-spacing: -0.02em; }
+  .portada .lema span { color: var(--r400); }
+  .portada .sub { font-size: 12pt; color: #cbd5e1; margin-top: 6mm; line-height: 1.5; max-width: 155mm; }
+  .portada .datos { margin-top: auto; font-size: 10pt; color: #cbd5e1; line-height: 1.7; }
+  .portada .datos b { color: #fff; }
+  .portada .vista { margin-top: 12mm; border-radius: 4mm; overflow: hidden; border: 0.4mm solid rgba(255,255,255,.15); width: 150mm; }
+  .portada .vista img { width: 100%; display: block; }
+  .chip { display: inline-block; align-self: flex-start; padding: 1.5mm 4mm; border-radius: 99px; background: rgba(255,255,255,0.1); border: 0.3mm solid rgba(255,255,255,0.22); font-size: 9pt; color: #fff; }
+</style>
+</head>
+<body>
+
+<!-- 1. Portada -->
+<section class="pagina portada">
+  <span class="chip">AseguraTech26 · Pitch de innovación</span>
+  <div class="logo">Escud<b>o</b></div>
+  <div class="lema">Pagas tranquilo.<br><span>Si te estafan, te respondemos.</span></div>
+  <p class="sub">Un microseguro contra estafas digitales dentro de la app del banco: avisa antes de pagarle a un número denunciado, protege a los padres y, si igual te estafan, te devuelve el dinero.</p>
+  <div class="vista"><img src="img/landing.jpg" alt=""></div>
+  <div class="datos">
+    <b>Desafío 2:</b> Seguros inclusivos, microseguros y masivos<br>
+    <b>Desafío 3:</b> Nuevos modelos de distribución y seguros<br>
+    <b>Etapa:</b> pre-semilla, con prototipo funcional en línea<br>
+    <b>Prototipo:</b> escudosegurosve.vercel.app<br>
+    Noviembre de 2026
+  </div>
+</section>
+
+<!-- 2. Resumen y problema -->
+<section class="pagina">
+  <div class="seccion">Resumen ejecutivo</div>
+  <h1>Protección contra estafas, por lo que cuesta un pasaje</h1>
+  <p class="intro">En Venezuela casi todo se paga por Pago Móvil, y por ahí también llegan las estafas: mensajes "del banco", páginas falsas, falsos familiares y tiendas que no existen. El dinero sale en minutos y nadie lo devuelve. <b>Escudo</b> es un <b>microseguro integrado en la app del banco</b>, desde <b>$0,60 al mes</b>, que <b>previene</b> (avisa antes de pagarle a un número denunciado) y <b>reembolsa</b> hasta <b>$200 por evento</b> si la estafa ocurre igual.</p>
+  <div class="cols3" style="margin:4mm 0">
+    <div class="tarjeta"><div class="ic">🙋‍♀️</div><h3>Para las personas</h3><p style="margin:0">Pagar tranquilas, proteger a sus padres y tener a quién acudir si las estafan.</p></div>
+    <div class="tarjeta"><div class="ic">🏦</div><h3>Para los bancos</h3><p style="margin:0">Menos fraude, un ingreso por comisión y más confianza en su canal digital.</p></div>
+    <div class="tarjeta"><div class="ic">🏢</div><h3>Para las aseguradoras</h3><p style="margin:0">Un producto masivo nuevo, distribuido en la app, con la prevención bajando la siniestralidad.</p></div>
+  </div>
+  <div class="seccion" style="margin-top:5mm">El problema</div>
+  <h1 style="font-size:19pt">Todo el país paga por Pago Móvil. Cuando te estafan, nadie responde.</h1>
+  <div class="cols" style="gap:4mm">
+    <div class="tarjeta"><div class="dato">63 %</div><p style="margin:0">de las operaciones comerciales van por Pago Móvil, con más de 8.500 transacciones por minuto.</p><div class="fuente">Cavecom-e · CriptoNoticias, Finanzas Digital, 2026</div></div>
+    <div class="tarjeta"><div class="dato">Estafas en aumento</div><p style="margin:0">El Cicpc alertó en octubre de 2026 sobre el aumento de las estafas virtuales; el phishing es el 40 % de los delitos informáticos reportados.</p><div class="fuente">Cicpc · NotiFalcón; Curadas, 2026</div></div>
+    <div class="tarjeta"><div class="dato">"No es responsable"</div><p style="margin:0">Ante estafas por correos y enlaces falsos, el Banco de Venezuela aclaró que no responde por esas pérdidas.</p><div class="fuente">El Diario, 2025</div></div>
+    <div class="tarjeta"><div class="dato">Se vende aparte</div><p style="margin:0">La póliza cibernética para personas que existe se contrata como producto individual, por WhatsApp con un corredor. No previene ni está en el momento del pago.</p><div class="fuente">Mercantil Seguros · Atina Seguros</div></div>
+  </div>
+  <div class="pie"><span>Escudo · AseguraTech26</span><span>2</span></div>
+</section>
+
+<!-- 3. Solución -->
+<section class="pagina">
+  <div class="seccion">La solución</div>
+  <h1>Prevenir primero. Pagar si igual pasa.</h1>
+  <p class="intro">Escudo vive dentro de la app del banco: el seguro está justo donde ocurre el riesgo, en el momento de pagar.</p>
+  <h2>Cómo funciona</h2>
+  <div class="paso"><span class="num">1</span><p><b>Se contrata en un toque:</b> plan Individual de $0,60 al mes o plan Familia de $1,40 al mes para hasta 4 personas (referenciales), cobrados de la misma cuenta.</p></div>
+  <div class="paso"><span class="num">2</span><p><b>Verifica antes de pagar:</b> si el número destino tiene denuncias verificadas, avisa con la modalidad de estafa y pide confirmar.</p></div>
+  <div class="paso"><span class="num">3</span><p><b>Protege a la familia:</b> si a un familiar le frenan un pago riesgoso, el titular recibe el aviso al instante.</p></div>
+  <div class="paso"><span class="num">4</span><p><b>"Me estafaron":</b> bloqueo guiado con el banco, denuncia ante el Cicpc pre-llenada, reporte del número y reclamo con respuesta en 72 horas.</p></div>
+  <h2>Qué cubre</h2>
+  <table>
+    <tr><th>Modalidad</th><th>Ejemplo</th><th style="text-align:center">Tope por evento</th></tr>
+    <tr><td><b>Suplantación e ingeniería social</b></td><td>"Te escribe tu banco" por WhatsApp, falso familiar en apuros</td><td class="cod">$200</td></tr>
+    <tr><td><b>Páginas y perfiles falsos</b></td><td>Sitio clonado del banco que vacía la cuenta</td><td class="cod">$200</td></tr>
+    <tr><td><b>Robo del teléfono</b></td><td>Transferencias no autorizadas tras el robo del equipo o la línea</td><td class="cod">$200</td></tr>
+    <tr><td><b>Compras en redes no entregadas</b></td><td>Tienda falsa en redes sociales</td><td class="cod">$80</td></tr>
+  </table>
+  <div class="destacado"><b>Sin deducible, 2 eventos al año.</b> No cubre pagos hechos a un número después de ver la alerta de Escudo y confirmar igual: así se premia la prevención y se evita el fraude del propio asegurado.</div>
+  <div class="pie"><span>Escudo · AseguraTech26</span><span>3</span></div>
+</section>
+
+<!-- 4. Prevención -->
+<section class="pagina">
+  <div class="seccion">Recorrido · Prevención</div>
+  <h1>La mejor estafa es la que no ocurre</h1>
+  <p class="intro">El usuario ve su protección, verifica antes de pagar y cuida a su familia desde la misma app.</p>
+  <div class="cols3" style="margin-top:5mm;gap:6mm">
+    <div class="tel"><img src="img/tel-inicio.png" alt=""><p><b>Protegida.</b> Plan, tope por evento y los pagos que Escudo frenó. Arriba, el aviso del pago frenado a la mamá.</p></div>
+    <div class="tel"><img src="img/tel-alerta.png" alt=""><p><b>Alerta antes de pagar.</b> El número tiene 7 denuncias por suplantación de banco. Si paga igual, ese pago no queda cubierto.</p></div>
+    <div class="tel"><img src="img/tel-familia.png" alt=""><p><b>Plan Familia.</b> Carmen, de 67 años, iba a pagar a un estafador. El pago se frenó y su hija recibió el aviso.</p></div>
+  </div>
+  <div class="pie"><span>Escudo · AseguraTech26</span><span>4</span></div>
+</section>
+
+<!-- 5. Me estafaron -->
+<section class="pagina">
+  <div class="seccion">Recorrido · "Me estafaron"</div>
+  <h1>Si igual pasa, no estás sola</h1>
+  <p class="intro">En el peor momento, Escudo guía lo que hay que hacer en el orden correcto y deja el reclamo en marcha.</p>
+  <div class="cols3" style="margin-top:5mm;gap:6mm">
+    <div class="tel"><img src="img/tel-paso1.png" alt=""><p><b>1. ¿Qué pasó?</b> En palabras simples, sin formularios.</p></div>
+    <div class="tel"><img src="img/tel-pasos.png" alt=""><p><b>2 y 3. El pago y qué hacer ya.</b> Bloqueo con el banco, denuncia pre-llenada para el Cicpc y reporte del número.</p></div>
+    <div class="tel"><img src="img/tel-enviado.png" alt=""><p><b>Reclamo recibido.</b> Monto cubierto, respuesta en 72 horas y el número reportado para todos.</p></div>
+  </div>
+  <div class="destacado" style="margin-top:6mm"><b>Cada reclamo protege a otros.</b> El número del estafador entra a la red de alertas y el próximo usuario, de cualquier banco aliado, recibe el aviso antes de pagar.</div>
+  <div class="pie"><span>Escudo · AseguraTech26</span><span>5</span></div>
+</section>
+
+<!-- 6. Banco -->
+<section class="pagina">
+  <div class="seccion">Recorrido · Banco</div>
+  <h1>El banco distribuye, previene y gana</h1>
+  <p class="intro">El banco ofrece Escudo dentro de su app y ve en tiempo real cuántos pagos riesgosos se frenaron y cuánto dinero no salió hacia estafadores.</p>
+  <figure style="margin-top:3mm"><img src="img/banco-kpis.png" alt=""><figcaption><b>Indicadores:</b> clientes protegidos, pagos frenados, dinero evitado y comisión del canal (cifras de la demo).</figcaption></figure>
+  <div class="cols" style="margin-top:5mm;align-items:start">
+    <figure><img src="img/banco-frenados.png" alt=""><figcaption><b>Pagos frenados:</b> solo iniciales; el banco no ve datos de terceros.</figcaption></figure>
+    <figure><img src="img/banco-porque.png" alt=""><figcaption><b>Por qué le conviene:</b> menos fraude, un ingreso nuevo y más confianza.</figcaption></figure>
+  </div>
+  <div class="pie"><span>Escudo · AseguraTech26</span><span>6</span></div>
+</section>
+
+<!-- 7. Aseguradora -->
+<section class="pagina">
+  <div class="seccion">Recorrido · Aseguradora</div>
+  <h1>Un producto masivo con la prevención de su lado</h1>
+  <p class="intro">La aseguradora resuelve reclamos en un solo flujo, ve qué modalidades crecen y mantiene la red de alertas con debido proceso.</p>
+  <figure style="margin-top:3mm"><img src="img/ase-kpis.png" alt=""><figcaption><b>Indicadores:</b> personas protegidas, prima, siniestralidad y reclamos por resolver.</figcaption></figure>
+  <figure style="margin-top:5mm"><img src="img/ase-graficos.png" alt=""><figcaption><b>Reclamos por modalidad y red de alertas</b> (datos de demostración), con apelaciones para quien se crea marcado por error.</figcaption></figure>
+  <figure style="margin-top:5mm"><img src="img/ase-reclamos.png" alt=""><figcaption><b>Reclamos:</b> el de María llega al instante; la aseguradora lo aprueba y lo paga por Pago Móvil.</figcaption></figure>
+  <div class="pie"><span>Escudo · AseguraTech26</span><span>7</span></div>
+</section>
+
+<!-- 8. Regulación -->
+<section class="pagina">
+  <div class="seccion">Viabilidad</div>
+  <h1>Construido sobre la regulación venezolana</h1>
+  <h2>Intermediación responsable</h2>
+  <ul>
+    <li><b>Escudo no asume riesgo ni intermedia.</b> El riesgo es de una aseguradora autorizada por la SUDEASEG y la colocación la hace un intermediario autorizado, en una póliza colectiva con cada banco.</li>
+    <li><b>Ramo:</b> a definir con la SUDEASEG según el condicionado. En el mercado ya existen pólizas cibernéticas para personas.</li>
+    <li><b>Datos personales:</b> la alerta y la consulta muestran solo cuántas denuncias tiene un número y la modalidad. Nunca nombres ni cédulas.</li>
+    <li><b>Debido proceso:</b> solo cuentan reclamos aprobados y denuncias formales, y existe apelación.</li>
+    <li><b>Antifraude:</b> el reclamo exige bloqueo con el banco y denuncia formal, y se cruza con el movimiento real de la cuenta.</li>
+  </ul>
+  <div class="cols" style="margin-top:4mm;align-items:start">
+    <div>
+      <h2 style="margin-top:0">Consulta pública</h2>
+      <p>Cualquier persona, aunque no tenga Escudo, puede revisar gratis si un número de Pago Móvil tiene denuncias antes de pagar. Es la cara visible de la red y un canal de captación.</p>
+      <h2>Aplicabilidad en Venezuela</h2>
+      <ul>
+        <li>Responde al medio de pago dominante y al delito que más crece.</li>
+        <li>Se distribuye en la app del banco, sin red de ventas.</li>
+        <li>Prima de centavos, accesible para cualquier usuario de Pago Móvil.</li>
+      </ul>
+    </div>
+    <figure><img src="img/consulta.png" alt=""><figcaption><b>¿Le puedo pagar a este número?</b> Resultado con denuncias verificadas.</figcaption></figure>
+  </div>
+  <div class="pie"><span>Escudo · AseguraTech26</span><span>8</span></div>
+</section>
+
+<!-- 9. Negocio -->
+<section class="pagina">
+  <div class="seccion">Modelo de negocio</div>
+  <h1>Cómo crece Escudo</h1>
+  <table>
+    <tr><th style="width:32%">Fuente de ingresos</th><th>Descripción</th></tr>
+    <tr><td><b>Comisión tecnológica</b></td><td>Un porcentaje de la prima por operar la plataforma, la red de alertas y el flujo de reclamos.</td></tr>
+    <tr><td><b>Licencia de verificación</b></td><td>El banco puede usar la verificación de destino para todos sus clientes, tengan o no el seguro.</td></tr>
+    <tr><td><b>Comisión del canal</b> (para el banco)</td><td>12 % de la prima en la demo (referencial): un ingreso nuevo sin asumir riesgo.</td></tr>
+  </table>
+  <div class="destacado"><b>Cifras de la demo (referenciales):</b> un banco con 790.000 usuarios de Pago Móvil y 6,1 % de adopción tiene 48.320 clientes protegidos; con 1.285 pagos riesgosos frenados al mes se evitan unos $96.000 en pérdidas.</div>
+  <h2>Hoja de ruta</h2>
+  <table>
+    <tr><th style="width:22%">Fase</th><th>Qué</th></tr>
+    <tr><td><b>Hoy</b></td><td>Prototipo en línea: app del usuario, panel del banco, panel de la aseguradora y consulta pública.</td></tr>
+    <tr><td><b>0–3 meses</b></td><td>Validación con 1 banco y 1 aseguradora; condicionado y reglas de la red de alertas.</td></tr>
+    <tr><td><b>3–6 meses</b></td><td>Piloto dentro de la app de un banco, con verificación de destino y plan Familia.</td></tr>
+    <tr><td><b>6–12 meses</b></td><td>Más bancos en la red; canal por WhatsApp para quien no usa app.</td></tr>
+    <tr><td><b>12+ meses</b></td><td>Versión para emprendedores y pequeños comercios.</td></tr>
+  </table>
+  <h2>Métricas del piloto</h2>
+  <ul>
+    <li>Adopción sobre los usuarios de Pago Móvil del banco</li>
+    <li>Pagos frenados, dinero evitado y % de alertas que terminan en "no pagar"</li>
+    <li>Tiempo de respuesta y de pago de reclamos; siniestralidad</li>
+    <li>Apelaciones resueltas en la red de alertas</li>
+  </ul>
+  <div class="pie"><span>Escudo · AseguraTech26</span><span>9</span></div>
+</section>
+
+<!-- 10. Estado -->
+<section class="pagina">
+  <div class="seccion">Estado actual</div>
+  <h1>Un prototipo que ya se puede probar</h1>
+  <p class="intro">El prototipo está en línea en <b>escudosegurosve.vercel.app</b>. Lo que se hace como usuario aparece en los paneles del banco y de la aseguradora.</p>
+  <h2>Qué está construido</h2>
+  <table>
+    <tr><th style="width:26%">Vista</th><th>Funcionalidades</th></tr>
+    <tr><td><b>Persona</b></td><td>Estado de protección, verificación del destinatario antes de pagar, plan Familia con avisos, "Me estafaron" en 3 pasos y seguimiento de reclamos.</td></tr>
+    <tr><td><b>Banco</b></td><td>Clientes protegidos, pagos frenados en vivo, dinero evitado, comisión del canal, altas por semana e integración por API.</td></tr>
+    <tr><td><b>Aseguradora</b></td><td>Personas protegidas, prima, siniestralidad, reclamos por modalidad, red de alertas con apelaciones, aprobación y pago de reclamos.</td></tr>
+    <tr><td><b>Consulta pública</b></td><td>Revisión gratuita de un número: denuncias verificadas y modalidad, sin datos personales.</td></tr>
+  </table>
+  <div class="destacado">Personas, bancos, aseguradoras, números y montos del prototipo son <b>ficticios o referenciales</b>. Las cifras deben validarse con datos reales de un banco aliado.</div>
+  <h2>Fuentes</h2>
+  <ul style="font-size:8.6pt">
+    <li>Pago Móvil, 63 % de las operaciones y 8.500 transacciones por minuto (Cavecom-e): CriptoNoticias; Finanzas Digital (2026).</li>
+    <li>Cicpc, aumento de estafas virtuales y cuentas prestadas (octubre de 2026): NotiFalcón.</li>
+    <li>Phishing, 40 % de los delitos informáticos reportados según el Cicpc: Curadas (2026).</li>
+    <li>Banco de Venezuela no responde por pérdidas de estafas por correo: El Diario (2025).</li>
+    <li>Póliza Cyber Personas de Mercantil Seguros: Atina Seguros.</li>
+  </ul>
+  <div class="pie"><span>Escudo · AseguraTech26</span><span>10</span></div>
+</section>
+
+</body>
+</html>

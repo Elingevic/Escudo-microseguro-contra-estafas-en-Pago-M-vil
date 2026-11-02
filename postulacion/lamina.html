@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Escudo — Lámina resumen · AseguraTech26</title>
+<style>
+  @font-face { font-family: Geist; src: url(geist.woff2) format("woff2"); font-weight: 100 900; }
+  @page { size: 297mm 210mm; margin: 0; }
+  :root { --r50: #f0fdfa; --r100: #ccfbf1; --r200: #99f6e4; --r400: #2dd4bf; --r500: #0d9488; --r600: #0f766e; --t950: #020617; --t900: #0f172a; --t500: #64748b; --t200: #e2e8f0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 297mm; height: 210mm; }
+  body { font-family: Geist, sans-serif; color: var(--t900); -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: 8.2pt; line-height: 1.32; }
+  .hoja { width: 297mm; height: 210mm; display: grid; grid-template-rows: 30mm 1fr 14mm; overflow: hidden; background: #f5f7fa; }
+  header { background: radial-gradient(90mm 50mm at 92% 0%, rgba(13,148,136,.55), transparent 70%), linear-gradient(120deg, #020617 0%, #0f172a 60%, #1e293b 100%); color: #fff; display: flex; align-items: center; padding: 0 11mm; gap: 9mm; }
+  .logo { font-size: 32pt; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+  .logo b { color: var(--r400); }
+  .lema { font-size: 14pt; font-weight: 650; line-height: 1.2; }
+  .lema span { color: var(--r400); }
+  .lema small { display: block; margin-top: 1.5mm; font-size: 8.5pt; font-weight: 400; color: #cbd5e1; }
+  .sello { margin-left: auto; text-align: right; font-size: 8.5pt; color: #cbd5e1; line-height: 1.5; }
+  .sello b { color: #fff; font-size: 10pt; }
+  main { padding: 5mm 11mm 4mm; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto 1fr; gap: 3.8mm; }
+  .caja { background: #fff; border-radius: 3.5mm; padding: 3.2mm 4mm; border: 0.3mm solid var(--t200); }
+  h2 { font-size: 7.5pt; font-weight: 750; letter-spacing: 0.08em; text-transform: uppercase; color: var(--r600); margin-bottom: 1.8mm; }
+  .grande { font-size: 10.4pt; font-weight: 750; line-height: 1.25; color: var(--t950); margin-bottom: 2mm; }
+  ul { list-style: none; }
+  li { position: relative; padding-left: 3.6mm; margin-top: 0.8mm; color: #334155; }
+  li::before { content: ""; position: absolute; left: 0; top: 1.6mm; width: 1.6mm; height: 1.6mm; border-radius: 50%; background: var(--r500); }
+  li b { color: var(--t950); }
+  ol.pasos { list-style: none; counter-reset: p; }
+  ol.pasos li { padding-left: 6mm; margin-top: 1.6mm; }
+  ol.pasos li::before { counter-increment: p; content: counter(p); width: 4.2mm; height: 4.2mm; top: 0.1mm; background: var(--t900); color: #fff; font-size: 7pt; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .capturas { grid-column: 1 / 4; display: grid; grid-template-columns: 0.55fr 0.55fr 0.55fr 1.5fr 1.3fr; gap: 4mm; }
+  .captura { background: #fff; border-radius: 3.5mm; border: 0.3mm solid var(--t200); padding: 2.5mm; display: flex; flex-direction: column; }
+  .captura .img { flex: 1; border-radius: 2mm; overflow: hidden; background: #f5f7fa; height: 36mm; display: flex; align-items: center; justify-content: center; }
+  .captura img { max-width: 100%; max-height: 36mm; display: block; }
+  .captura img.tel { border-radius: 2.5mm; border: 0.8mm solid var(--t950); }
+  .captura p { margin-top: 2mm; font-size: 7.6pt; color: #475569; }
+  .captura p b { color: var(--t950); }
+  .fila3 { grid-column: 1 / 4; display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; }
+  footer { background: #fff; border-top: 0.3mm solid var(--t200); display: flex; align-items: center; gap: 6mm; padding: 0 11mm; font-size: 8pt; color: var(--t500); }
+  footer .url { font-size: 11pt; font-weight: 750; color: var(--t950); }
+  footer .demo { margin-left: auto; text-align: right; }
+  footer b { color: var(--t950); }
+</style>
+</head>
+<body>
+<div class="hoja">
+  <header>
+    <div class="logo">Escud<b>o</b></div>
+    <div class="lema">Pagas tranquilo. <span>Si te estafan, te respondemos.</span>
+      <small>Microseguro contra estafas digitales dentro de la app del banco, para usuarios de Pago Móvil.</small></div>
+    <div class="sello"><b>AseguraTech26 · Pitch de innovación</b><br>Desafío 2: Seguros inclusivos, microseguros y masivos<br>Desafío 3: Nuevos modelos de distribución</div>
+  </header>
+  <main>
+    <div class="caja">
+      <h2>El problema</h2>
+      <div class="grande">Todo el país paga por Pago Móvil. Cuando te estafan, nadie responde.</div>
+      <ul>
+        <li><b>63 %</b> de las operaciones comerciales van por Pago Móvil (Cavecom-e).</li>
+        <li>El <b>Cicpc alerta</b> que las estafas virtuales aumentan.</li>
+        <li>Los bancos <b>no responden</b> por estafas de ingeniería social.</li>
+      </ul>
+    </div>
+    <div class="caja">
+      <h2>La solución</h2>
+      <div class="grande">Prevenir antes de pagar y reembolsar si igual pasa.</div>
+      <ul>
+        <li><b>Desde $0,60 al mes</b>, dentro de la app del banco.</li>
+        <li><b>Hasta $200 por evento</b>, sin deducible, en 72 horas.</li>
+        <li><b>Plan Familia</b> para proteger a los padres.</li>
+      </ul>
+    </div>
+    <div class="caja">
+      <h2>Cómo funciona</h2>
+      <ol class="pasos">
+        <li><b>Verifica el número</b> antes de cada Pago Móvil.</li>
+        <li><b>Frena pagos riesgosos</b> y avisa a la familia.</li>
+        <li><b>"Me estafaron":</b> bloqueo, denuncia pre-llenada y reclamo.</li>
+        <li><b>Red de alertas:</b> cada estafa protege a los demás.</li>
+      </ol>
+    </div>
+    <div class="capturas">
+      <div class="captura"><div class="img"><img class="tel" src="img/tel-alerta.png"></div><p><b>Alerta</b> antes de pagar.</p></div>
+      <div class="captura"><div class="img"><img class="tel" src="img/tel-familia.png"></div><p><b>Familia</b> protegida.</p></div>
+      <div class="captura"><div class="img"><img class="tel" src="img/tel-enviado.png"></div><p><b>Reclamo</b> en 3 pasos.</p></div>
+      <div class="captura"><div class="img"><img src="img/banco-kpis.png"></div><p><b>Panel del banco:</b> clientes protegidos, pagos frenados y dinero evitado.</p></div>
+      <div class="captura"><div class="img"><img src="img/ase-graficos.png"></div><p><b>Panel de la aseguradora:</b> reclamos por modalidad y red de alertas.</p></div>
+    </div>
+    <div class="fila3">
+      <div class="caja">
+        <h2>Diferenciadores</h2>
+        <ul>
+          <li><b>En el momento del pago</b>, no como póliza aparte.</li>
+          <li><b>Prevención + reembolso</b> en un solo producto.</li>
+          <li><b>Plan Familia</b> con avisos.</li>
+          <li><b>Red de alertas</b> entre bancos.</li>
+        </ul>
+      </div>
+      <div class="caja">
+        <h2>Aplicabilidad en Venezuela</h2>
+        <ul>
+          <li>Responde al <b>medio de pago dominante</b>.</li>
+          <li><b>Aseguradora e intermediario autorizados</b>.</li>
+          <li><b>Sin datos personales</b> en las alertas y con apelación.</li>
+        </ul>
+      </div>
+      <div class="caja">
+        <h2>Modelo de negocio</h2>
+        <ul>
+          <li><b>Comisión tecnológica</b> sobre la prima.</li>
+          <li><b>Licencia</b> de verificación para bancos.</li>
+          <li><b>Comisión del canal</b> para el banco: un ingreso nuevo.</li>
+        </ul>
+      </div>
+      <div class="caja">
+        <h2>Estado y próximos pasos</h2>
+        <ul>
+          <li><b>Hoy:</b> prototipo en línea con 4 vistas conectadas.</li>
+          <li><b>0–3 meses:</b> validación con 1 banco y 1 aseguradora.</li>
+          <li><b>Luego:</b> piloto dentro de la app de un banco.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div><div class="url">escudosegurosve.vercel.app</div>Etapa: pre-semilla, con prototipo funcional en línea</div>
+    <div class="demo">Pruébalo: <b>Persona → Pagar → Probar con un número denunciado</b>, luego <b>Familia</b> y <b>Me estafaron</b>.<br>Personas, bancos, aseguradoras, números y montos de la demostración son ficticios o referenciales.</div>
+  </footer>
+</div>
+</body>
+</html>
