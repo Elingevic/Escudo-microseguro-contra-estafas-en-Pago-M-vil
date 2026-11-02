@@ -1,5 +1,5 @@
 "use strict";
-/* Escudo — prototipo de demostración (AseguraTech26).
+/* Avispao — prototipo de demostración (AseguraTech26).
    Todo corre en el navegador; el estado se guarda en localStorage.
    Personas, bancos, aseguradoras, números y montos son ficticios o referenciales. */
 
@@ -48,10 +48,10 @@ const SEMILLA = () => ({
     "04125550466": { n: 2, mod: "Falso familiar en apuros", ultimo: "ayer" },
   },
   reclamos: [
-    { id: "ESC-2026-0907", fecha: "01/11 16:20", quien: "Pedro Salazar", banco: "Banco Cumbre", tipo: "Suplantación de banco por WhatsApp", monto: 150, estado: "En revisión" },
-    { id: "ESC-2026-0899", fecha: "31/10 11:05", quien: "Ana Mora", banco: "Banco Cumbre", tipo: "Página o perfil falso (phishing)", monto: 200, estado: "Aprobado" },
-    { id: "ESC-2026-0871", fecha: "18/08 19:40", quien: "María González", banco: "Banco Cumbre", tipo: "Compra en redes no entregada", monto: 45, estado: "Pagado" },
-    { id: "ESC-2026-0864", fecha: "17/08 08:12", quien: "José Ramírez", banco: "Banco Llanura", tipo: "Robo del teléfono", monto: 180, estado: "Pagado" },
+    { id: "AVP-2026-0907", fecha: "01/11 16:20", quien: "Pedro Salazar", banco: "Banco Cumbre", tipo: "Suplantación de banco por WhatsApp", monto: 150, estado: "En revisión" },
+    { id: "AVP-2026-0899", fecha: "31/10 11:05", quien: "Ana Mora", banco: "Banco Cumbre", tipo: "Página o perfil falso (phishing)", monto: 200, estado: "Aprobado" },
+    { id: "AVP-2026-0871", fecha: "18/08 19:40", quien: "María González", banco: "Banco Cumbre", tipo: "Compra en redes no entregada", monto: 45, estado: "Pagado" },
+    { id: "AVP-2026-0864", fecha: "17/08 08:12", quien: "José Ramírez", banco: "Banco Llanura", tipo: "Robo del teléfono", monto: 180, estado: "Pagado" },
   ],
   frenados: [
     { h: "10:42", cli: "C. G.", tel: "0414-555-0198", monto: 85, rep: 7, res: "No pagó" },
@@ -65,7 +65,7 @@ const SEMILLA = () => ({
 // ---------------------------------------------------------------------------
 // Estado y utilidades
 // ---------------------------------------------------------------------------
-const CLAVE = "escudo_demo";
+const CLAVE = "avispao_demo";
 let S = cargar();
 function cargar() {
   try { const s = JSON.parse(localStorage.getItem(CLAVE)); if (s && s.v === SEMILLA().v) return s; } catch { /* sin almacenamiento */ }
@@ -109,8 +109,8 @@ function landing() {
     <div class="hero-in">
       <div class="aparecer">
         <span class="chip">🛡️ AseguraTech26 · Desafío 2: seguros inclusivos, microseguros y masivos</span>
-        <h1>Pagas tranquilo.<br><span>Si te estafan, te respondemos.</span></h1>
-        <p class="lead">Escudo es un microseguro contra estafas digitales que vive dentro de la app de tu banco. Te avisa antes de pagarle a un número denunciado, protege a tus padres y, si igual te estafan, te devuelve el dinero.</p>
+        <h1>Ponte avispao<br><span>antes de pagar.</span></h1>
+        <p class="lead">Avispao es un microseguro contra estafas digitales que vive dentro de la app de tu banco. Te avisa antes de pagarle a un número denunciado, protege a tus padres y, si igual te estafan, te devuelve el dinero.</p>
         <div class="ctas">
           <a class="btn btn-pri btn-lg" href="#/persona">Probar como usuario</a>
           <a class="btn btn-borde btn-lg" href="#/consultar">¿Le puedo pagar a este número?</a>
@@ -125,9 +125,9 @@ function landing() {
         <div class="eyebrow" style="color:var(--r400)">Un martes cualquiera</div>
         <div class="linea-tiempo" style="margin-top:14px">
           <div class="lt-item"><span class="hora">10:40</span><b>A Carmen (67) le escriben "del banco"</b><span>Le piden un Pago Móvil para "desbloquear" su cuenta.</span></div>
-          <div class="lt-item"><span class="hora">10:42</span><b>Escudo frena el pago</b><span>Ese número tiene 7 denuncias. Carmen ve el aviso y su hija también.</span></div>
+          <div class="lt-item"><span class="hora">10:42</span><b>Avispao frena el pago</b><span>Ese número tiene 7 denuncias. Carmen ve el aviso y su hija también.</span></div>
           <div class="lt-item"><span class="hora">18:15</span><b>María cae en una tienda falsa en Instagram</b><span>Toca "Me estafaron": bloqueo guiado, denuncia pre-llenada y reclamo.</span></div>
-          <div class="lt-item"><span class="hora">+48 h</span><b>Escudo le paga por Pago Móvil</b><span>Y el número estafador queda marcado para todos.</span></div>
+          <div class="lt-item"><span class="hora">+48 h</span><b>Avispao le paga por Pago Móvil</b><span>Y el número estafador queda marcado para todos.</span></div>
         </div>
       </div>
     </div>
@@ -163,7 +163,7 @@ function landing() {
       <a class="tarjeta rol-card" href="#/consultar"><div class="card-ic">🔎</div><h3>Consultar número</h3><p>Cualquiera puede revisar si un número tiene denuncias antes de pagar.</p><div class="ir">Consultar →</div></a>
     </div>
   </section>
-  <footer class="pie"><span><b>Escudo</b> · Prototipo para AseguraTech26 (SUDEASEG) · Noviembre de 2026</span><span>Escudo es la capa tecnológica: el riesgo lo asume una aseguradora autorizada y la colocación la hace un intermediario autorizado.</span></footer>`;
+  <footer class="pie"><span><b>Avispao</b> · Prototipo para AseguraTech26 (SUDEASEG) · Noviembre de 2026</span><span>Avispao es la capa tecnológica: el riesgo lo asume una aseguradora autorizada y la colocación la hace un intermediario autorizado.</span></footer>`;
 }
 
 // ---------------------------------------------------------------------------
@@ -174,11 +174,11 @@ function persona() {
   <div class="contenedor"><div class="escena">
     <div class="explica aparecer">
       <span class="eyebrow">Vista del usuario</span>
-      <h2>Así se ve Escudo dentro de la app del banco.</h2>
+      <h2>Así se ve Avispao dentro de la app del banco.</h2>
       <p>María tiene el plan Familia: la protege a ella y a sus padres. Prueba las cuatro pestañas del teléfono.</p>
       <ol>
         <li><b>Pagar</b><span>Escribe un número y verifica antes de pagar. Usa el botón "Probar con un número denunciado" para ver la alerta.</span></li>
-        <li><b>Familia</b><span>Mira cómo Escudo le frenó un pago riesgoso a Carmen, la mamá de María.</span></li>
+        <li><b>Familia</b><span>Mira cómo Avispao le frenó un pago riesgoso a Carmen, la mamá de María.</span></li>
         <li><b>Me estafaron</b><span>Desde Inicio, reporta una estafa en 3 pasos: qué pasó, cuál pago y qué hacer ya.</span></li>
         <li><b>Revisa los otros paneles</b><span>Tu reclamo llega al <a href="#/aseguradora">panel de la aseguradora</a>, que lo aprueba y paga. Tus alertas suman en el <a href="#/banco">panel del banco</a>.</span></li>
       </ol>
@@ -198,7 +198,7 @@ function pantalla() {
   const p = S.pestana;
   const tabs = [["inicio", "🏠", "Inicio"], ["pagar", "💸", "Pagar"], ["familia", "👨‍👩‍👧", "Familia"], ["reclamos", "📄", "Reclamos"]];
   const nav = `<nav class="app-nav">${tabs.map(([k, i, t]) => `<button class="${p === k ? "on" : ""}" data-tab="${k}"><span>${i}</span>${t}</button>`).join("")}</nav>`;
-  const cab = `<div class="app-cab"><div><div class="hola">${BANCO.nombre} · con Escudo</div><div class="nom">Hola, María</div></div>${avatar("María González")}</div>`;
+  const cab = `<div class="app-cab"><div><div class="hola">${BANCO.nombre} · con Avispao</div><div class="nom">Hola, María</div></div>${avatar("María González")}</div>`;
   const cuerpo = { inicio: tabInicio, pagar: tabPagar, familia: tabFamilia, reclamos: tabReclamos }[p]();
   return `${cab}<div class="app-cuerpo">${cuerpo}</div>${nav}`;
 }
@@ -226,14 +226,14 @@ function tabPagar() {
     if (pg.rep) {
       res = `<div class="banda-alerta roja aparecer"><span class="i">⚠️</span><span><b>Este número tiene ${pg.rep.n} denuncias de estafa</b><br>Modalidad: ${esc(pg.rep.mod)} · última ${esc(pg.rep.ultimo)}. Si te escribieron "del banco" o un "familiar" pidiendo dinero, es una estafa.</span></div>
         <div class="acciones-app"><button class="acc" style="background:var(--verde50);border-color:#bbf7d0;color:#14532d" data-acc="no-pagar"><span class="i">✋</span>No pagar</button><button class="acc" data-acc="pagar-igual"><span class="i">➡️</span>Pagar igual</button></div>
-        <p class="sub" style="margin-top:8px">Si pagas igual, este pago no queda cubierto por Escudo.</p>`;
+        <p class="sub" style="margin-top:8px">Si pagas igual, este pago no queda cubierto por Avispao.</p>`;
     } else {
       res = `<div class="banda-alerta verde aparecer"><span class="i">✅</span><span><b>Sin denuncias para este número</b><br>Puedes pagar. Si algo sale mal, estás protegida hasta ${usd(200)}.</span></div>
         <button class="btn-turno btn-pri" data-acc="pagar-ok">Confirmar Pago Móvil de ${usd(pg.monto || 0)}</button>`;
     }
   }
   return `<div class="app-titulo" style="margin-top:6px">Pago Móvil verificado</div>
-    <p class="app-sub">Antes de pagar, Escudo revisa si el número tiene denuncias.</p>
+    <p class="app-sub">Antes de pagar, Avispao revisa si el número tiene denuncias.</p>
     <label class="etq">Teléfono del destinatario</label><input class="campo-app mono" id="p-tel" value="${esc(pg.tel || "")}" placeholder="0414-000-0000" inputmode="tel">
     <label class="etq">Banco</label><select class="campo-app" id="p-banco">${["Banco Cumbre", "Banco Llanura", "Banco Orinoco", "Banco Ávila"].map((b) => `<option ${pg.banco === b ? "selected" : ""}>${b}</option>`).join("")}</select>
     <label class="etq">Monto (USD equivalente)</label><input class="campo-app" id="p-monto" value="${esc(pg.monto || "")}" placeholder="50" inputmode="decimal">
@@ -316,7 +316,7 @@ function banco() {
   const max = Math.max(...ALTAS);
   return `
   <div class="contenedor">
-    <div class="titulo-pag"><div><span class="eyebrow">Panel del banco (canal)</span><h1>${BANCO.nombre}</h1><p>Distribuye Escudo dentro de su app · Aseguradora: ${ASEGURADORA.nombre} · Intermediario: ${ASEGURADORA.corredor}</p></div>
+    <div class="titulo-pag"><div><span class="eyebrow">Panel del banco (canal)</span><h1>${BANCO.nombre}</h1><p>Distribuye Avispao dentro de su app · Aseguradora: ${ASEGURADORA.nombre} · Intermediario: ${ASEGURADORA.corredor}</p></div>
       <span class="badge b-verde" style="font-size:13px;padding:6px 12px"><span class="punto vivo"></span> Red de alertas activa</span></div>
     <div class="kpis">
       <div class="kpi"><div class="v">${ent(BANCO.clientes)}</div><div class="e">clientes protegidos</div><div class="d">${(BANCO.clientes / BANCO.usuariosPM * 100).toFixed(1)} % de sus usuarios de Pago Móvil</div></div>
@@ -338,7 +338,7 @@ function banco() {
 
 <span class="c">// Contratar dentro de la app</span>
 <span class="k">POST</span> /v1/polizas   { <span class="s">"cliente"</span>: <span class="s">"V-1*.***.***"</span>, <span class="s">"plan"</span>: <span class="s">"familia"</span> }
-<span class="c">→ 201 { "certificado": "ESC-CF-118204", "prima_usd": 1.40 }</span></pre></div>
+<span class="c">→ 201 { "certificado": "AVP-CF-118204", "prima_usd": 1.40 }</span></pre></div>
       </div>
       <div class="pila">
         <div class="tarjeta"><h2 class="sec">📈 Altas por semana</h2>
@@ -363,7 +363,7 @@ function aseguradora() {
   const maxp = Math.max(...MODALIDADES.map((m) => m.p));
   return `
   <div class="contenedor">
-    <div class="titulo-pag"><div><span class="eyebrow">Panel de la aseguradora</span><h1>${ASEGURADORA.nombre}</h1><p>Microseguro Escudo · 2 bancos aliados · colocado por ${ASEGURADORA.corredor}</p></div></div>
+    <div class="titulo-pag"><div><span class="eyebrow">Panel de la aseguradora</span><h1>${ASEGURADORA.nombre}</h1><p>Microseguro Avispao · 2 bancos aliados · colocado por ${ASEGURADORA.corredor}</p></div></div>
     <div class="kpis">
       <div class="kpi"><div class="v">${ent(polizas)}</div><div class="e">personas protegidas</div></div>
       <div class="kpi"><div class="v">${usd(prima)}</div><div class="e">prima del mes</div></div>
@@ -448,7 +448,7 @@ document.addEventListener("click", (e) => {
     }
     case "pagar-igual":
       S.frenados = [{ h: hhmm(Date.now()), cli: "M. G.", tel: S.pago.tel, monto: S.pago.monto || 0, rep: S.pago.rep.n, res: "Pagó igual (sin cobertura)" }, ...S.frenados].slice(0, 6);
-      toast("Pago enviado. Este pago no queda cubierto por Escudo");
+      toast("Pago enviado. Este pago no queda cubierto por Avispao");
       return set({ pago: null });
     case "pagar-ok": toast("Pago Móvil enviado (simulado)"); return set({ pago: null });
     case "me-estafaron": return set({ reclamo: { paso: 1 } });
@@ -456,7 +456,7 @@ document.addEventListener("click", (e) => {
     case "enviar": {
       const r = S.reclamo, m = MOVS.find((x) => x.id === r.mov);
       const n = 913 + S.reclamos.filter((x) => x.estado === "Nuevo").length;
-      const id = `ESC-2026-${String(n).padStart(4, "0")}`;
+      const id = `AVP-2026-${String(n).padStart(4, "0")}`;
       const ahora = new Date();
       const fecha = `${String(ahora.getDate()).padStart(2, "0")}/${String(ahora.getMonth() + 1).padStart(2, "0")} ${hhmm(ahora)}`;
       const tope = r.tipo === "Compra en redes no entregada" ? 80 : 200;

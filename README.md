@@ -1,6 +1,6 @@
-# Escudo
+# Avispao
 
-> Pagas tranquilo. Si te estafan, te respondemos.
+> Ponte avispao antes de pagar. Si igual te estafan, te respondemos.
 
 Microseguro contra estafas digitales integrado en la app del banco, para usuarios de Pago Móvil en Venezuela: verificación del número antes de pagar, plan Familia para proteger a los padres, botón "Me estafaron" con reclamo guiado y una red de alertas compartida entre bancos. Postulación a **AseguraTech26**, desafío 2 (seguros inclusivos, microseguros y masivos).
 
@@ -15,7 +15,7 @@ vercel.json   le dice a Vercel que publique la carpeta web/
 
 ## Publicar en Vercel
 
-Importa el repositorio en Vercel con *Framework Preset* = **Other** y sin comando de build. El `vercel.json` ya apunta a `web/`. Nombre sugerido del proyecto: **escudosegurosve**.
+Importa el repositorio en Vercel con *Framework Preset* = **Other** y sin comando de build. El `vercel.json` ya apunta a `web/`. Nombre sugerido del proyecto: **avispaove**.
 
 ## Qué hace el prototipo
 

@@ -1,6 +1,6 @@
-# Escudo — Pitch AseguraTech26
+# Avispao — Pitch AseguraTech26
 
-> **Pagas tranquilo. Si te estafan, te respondemos.**
+> **Ponte avispao antes de pagar. Si igual te estafan, te respondemos.**
 
 **Desafío principal:** 2 — Seguros inclusivos, microseguros y masivos
 **Desafío secundario:** 3 — Nuevos modelos de distribución (seguro integrado en la app del banco)
@@ -21,10 +21,10 @@
 
 ## 2. La solución
 
-**Escudo** es un **microseguro contra estafas digitales integrado en la app del banco**, que combina **prevención** y **reembolso**:
+**Avispao** es un **microseguro contra estafas digitales integrado en la app del banco**, que combina **prevención** y **reembolso**:
 
 1. **Se contrata en un toque** dentro de la app del banco, desde **$0,60 al mes** (referencial), cobrado de la misma cuenta.
-2. **Verificación antes de pagar:** al hacer un Pago Móvil, Escudo revisa si el número destino tiene **denuncias verificadas** y avisa antes de confirmar.
+2. **Verificación antes de pagar:** al hacer un Pago Móvil, Avispao revisa si el número destino tiene **denuncias verificadas** y avisa antes de confirmar.
 3. **Plan Familia (hasta 4 personas, $1,40 al mes):** protege a los padres. Si a tu mamá le frenan un pago riesgoso, te llega el aviso.
 4. **Botón "Me estafaron":** en 3 pasos (qué pasó, cuál pago, qué hacer ya) guía el **bloqueo con el banco**, deja **la denuncia ante el Cicpc pre-llenada** y **reporta el número** a la red.
 5. **Reembolso de hasta $200 por evento**, 2 eventos al año, sin deducible, pagado por Pago Móvil. Respuesta en **72 horas**.
@@ -39,11 +39,11 @@
 | Robo del teléfono | Transferencias no autorizadas tras el robo del equipo o la línea | $200 |
 | Compras en redes no entregadas | Tienda falsa en Instagram | $80 |
 
-**No cubre** los pagos hechos a un número después de ver la alerta de Escudo y confirmar igual. Así se evita el fraude del propio asegurado y se premia la prevención.
+**No cubre** los pagos hechos a un número después de ver la alerta de Avispao y confirmar igual. Así se evita el fraude del propio asegurado y se premia la prevención.
 
 ### Los actores
 
-| Actor | Qué hace en Escudo |
+| Actor | Qué hace en Avispao |
 |---|---|
 | **Persona** | Contrata, verifica antes de pagar, protege a su familia y reporta estafas |
 | **Banco** (canal) | Integra la verificación y la contratación en su app; cobra una comisión por canal |
@@ -69,7 +69,7 @@
 
 ## 5. Cumplimiento regulatorio
 
-- **Escudo no asume riesgo ni intermedia:** el riesgo es de una aseguradora autorizada por la SUDEASEG y la colocación la hace un intermediario autorizado.
+- **Avispao no asume riesgo ni intermedia:** el riesgo es de una aseguradora autorizada por la SUDEASEG y la colocación la hace un intermediario autorizado.
 - **Ramo:** a definir con la SUDEASEG según el condicionado (ciberriesgos de personas o el ramo patrimonial que corresponda). Ya existen pólizas cibernéticas para personas aprobadas en el mercado venezolano.
 - **Datos personales:** la consulta pública y la alerta muestran solo cuántas denuncias tiene un número y la modalidad. Nunca nombres ni cédulas.
 - **Debido proceso en la red de alertas:** solo cuentan reclamos aprobados y denuncias formales, y cualquiera puede pedir revisión si cree que su número está marcado por error.
@@ -122,7 +122,7 @@ Microprima masiva, comisión para el banco, licencia de verificación.
 Aseguradora e intermediario autorizados, privacidad y apelaciones en la red de alertas.
 
 **[4:30 – 5:00] Cierre**
-"Por lo que cuesta un pasaje, nadie en tu familia debería perder lo que tiene en la cuenta por un mensaje falso. Escudo: pagas tranquilo, y si te estafan, te respondemos."
+"Por lo que cuesta un pasaje, nadie en tu familia debería perder lo que tiene en la cuenta por un mensaje falso. Avispao: ponte avispao antes de pagar, y si igual te estafan, te respondemos."
 
 ---
 
@@ -130,7 +130,7 @@ Aseguradora e intermediario autorizados, privacidad y apelaciones en la red de a
 
 - **¿No incentiva a la gente a ser descuidada?** → No cubre pagos hechos después de ver la alerta, tiene topes por evento y por año, y la prevención está en el centro.
 - **¿Y si alguien finge una estafa?** → El reclamo exige bloqueo con el banco y denuncia formal, y se cruza con el movimiento real de la cuenta.
-- **¿No es lo mismo que la póliza cyber de Mercantil?** → Esa es una póliza individual que se contrata aparte. Escudo es un microseguro integrado en el momento del pago, con prevención, plan familiar y red de alertas entre bancos.
+- **¿No es lo mismo que la póliza cyber de Mercantil?** → Esa es una póliza individual que se contrata aparte. Avispao es un microseguro integrado en el momento del pago, con prevención, plan familiar y red de alertas entre bancos.
 - **¿Qué pasa con alguien marcado por error?** → Solo cuentan reclamos aprobados y denuncias formales; hay apelación y no se publican datos personales.
 - **¿Por qué un banco lo querría?** → Menos reclamos, un ingreso nuevo y más confianza en su canal digital.
 
